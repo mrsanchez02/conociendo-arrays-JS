@@ -1,8 +1,25 @@
 ![Autos](https://images.pexels.com/photos/1280560/pexels-photo-1280560.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
-
 # **Arrays**
 
 El objeto Array de JavaScript es un objeto global que es usado en la construcción de arrays, que son objetos tipo lista de alto nivel.
+
+## Tabla de contenidos
+1. [Crear un Array](#crear-un-array)
+2. [Acceder a un elemento de Array mediante su índice](#acceder-a-un-elemento-de-array-mediante-su-índice)
+3. [Recorrer un Array](#recorrer-un-array)
+    * [Recorrer un Array (forEach)](#recorrer-un-array (forEach))
+    * [Recorrer un Array (map)](#recorrer-un-array-(map))
+4. [Añadir un elemento al final de un Array](#añadir-un-elemento-al-final-de-un-array)
+5. [Eliminar el ultimo elemento de un Array](#eliminar-el-ultimo-elemento-de-un-array)
+6. [Añadir un elemento al principio de un Array](#añadir-un-elemento-al-principio-de-un-array)
+7. [Eliminar el primer elemento de un Array](#eliminar-el-primer-elemento-de-un-array)
+8. [Encontrar el índice de un elemento del Array](#encontrar-el-índice-de-un-elemento-del-array)
+9. [Eliminar un único elemento mediante su posición](#eliminar-un-único-elemento-mediante-su-posición)
+10. [Eliminar varios elementos a partir de una posición](#eliminar-varios-elementos-a-partir-de-una-posición)
+11. [Copiar un Array](#copiar-un-array)
+12. [Longitud de un Array](#longitud-de-un-array)
+13. [Filter](#filter)
+
 
 ## **Descripción**
 
@@ -13,7 +30,7 @@ Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos
 ### **Crear un Array**
 
 ```javascript
-let nombres = ["Eddy","David"]
+var nombres = ["Eddy","David"]
 ```
 
 ### **Acceder a un elemento de Array mediante su índice**
@@ -38,8 +55,8 @@ nombres.forEach((elemento,indice) => {
 >*__Nota:__ El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.*
 
 ```javascript
-let numeros = [1,2,3,4,5,6,7,8,9,10,11,12]
-let tablaDelCinco = numeros.map(element => element * 5)
+var numeros = [1,2,3,4,5,6,7,8,9,10,11,12]
+var tablaDelCinco = numeros.map(element => element * 5)
 console.log(tablaDelCinco)
 ```
 
@@ -50,7 +67,7 @@ nombres.push("Jose") // Añade "Jose" al final del array.
 console.log(nombres)
 ```
 
-### **Eliminar el último elemento de un Array**
+### **Eliminar el ultimo elemento de un Array**
 ---
 ```javascript
 nombres.pop() // Elimina el ultimo elemento del array, en este caso "Jose"
@@ -75,7 +92,7 @@ console.log(nombres)
 ---
 
 ```javascript
-let posicion = nombres.indexOf("Eddy"); //Esto retorna un numero, que es la posicion del elemento en el array.
+var posicion = nombres.indexOf("Eddy"); //Esto retorna un numero, que es la posicion del elemento en el array.
 console.log(posicion)
 ```
 
@@ -95,9 +112,9 @@ console.log(nombres)
  >¡Ojo! que al hacer esto estaríamos modificando el array de origen.
 
 ```javascript
-let vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
+var vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
 console.log(vegetales)
-let elementosEliminados = vegetales.splice(1,2)
+var elementosEliminados = vegetales.splice(1,2)
 console.log(`Elementos eliminados del array: ${elementosEliminados}`)
 console.log(`Elementos actuales en el array: ${vegetales}`)
 ```
@@ -105,13 +122,13 @@ console.log(`Elementos actuales en el array: ${vegetales}`)
 ---
 ```javascript
 nombres.push('Eddy','Jose','Ruperta')
-let copiaArray = nombres.slice()
+var copiaArray = nombres.slice()
 console.log(copiaArray)
 ```
 ### **Longitud de un Array**
 ---
 ```javascript
-let longitud = nombres.length
+var longitud = nombres.length
 console.log(longitud) // 4
 console.log(nombres[0].length)
 ```
